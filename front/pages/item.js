@@ -1,13 +1,15 @@
 import React from 'react';
 
 import AppLayout from '../components/AppLayout';
+import ShopList from "./ItemList";
 
-const Item = () => {
+
+const ItemList = () => {
     return (
         <AppLayout>
-
+            <ItemList />
         </AppLayout>
     );
 };
 
-export default Item;
+export default ItemList;
