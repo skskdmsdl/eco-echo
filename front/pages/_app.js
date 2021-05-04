@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import 'antd/dist/antd.css';
 
-const EcoStore = ({ Component }) => (
+const EcoEcho = ({ Component }) => (
     <>
       <Head>
-        <title>EcoStore</title>
+        <title>Eco-Echo</title>
       </Head>
       <Component />
     </>
@@ -16,4 +16,4 @@ const EcoStore = ({ Component }) => (
     Component: PropTypes.elementType.isRequired,
   };
   
-  export default EcoStore; 
+  export default EcoEcho; 
