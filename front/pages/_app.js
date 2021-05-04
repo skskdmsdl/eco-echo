@@ -12,7 +12,7 @@ const EcoEcho = ({ Component }) => (
     </>
   );
   
-  EcoStore.propTypes = {
+  EcoEcho.propTypes = {
     Component: PropTypes.elementType.isRequired,
   };
   
