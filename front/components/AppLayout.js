@@ -13,7 +13,7 @@ const AppLayout = ({ children }) => {
                     <Link href='/'><a>쇼핑몰</a></Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Link href='/Item'><a>상품</a></Link>
+                    <Link href='/item'><a>상품</a></Link>
                 </Menu.Item>
                 <Menu.Item>
                     <Link href='/'><a>더보기</a></Link>

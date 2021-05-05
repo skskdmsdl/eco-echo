@@ -7,8 +7,7 @@ import ItemList from '../components/ItemList';
 const Home = () => {
     return (
         <AppLayout>
-            <ItemList />
-            {/*<ShopList />*/}
+            <ShopList />
         </AppLayout>
     );
 };

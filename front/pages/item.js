@@ -1,10 +1,10 @@
 import React from 'react';
 
 import AppLayout from '../components/AppLayout';
-import ShopList from "./ItemList";
+import ItemList from "../components/ItemList";
 
 
-const ItemList = () => {
+const Item = () => {
     return (
         <AppLayout>
             <ItemList />
@@ -12,4 +12,4 @@ const ItemList = () => {
     );
 };
 
-export default ItemList;
+export default Item;

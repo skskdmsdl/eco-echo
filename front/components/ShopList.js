@@ -24,7 +24,6 @@ const AppDiv = styled.div`
 const AppBlock = styled.div`
   margin: 0 auto;
   margin-top: 2rem;
-  border: 1px solid black;
   padding: 1rem;
 `;
 
