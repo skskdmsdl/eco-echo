@@ -12,8 +12,8 @@ const EcoEcho = ({ Component }) => (
     </>
   );
   
-  EcoEcho.propTypes = {
-    Component: PropTypes.elementType.isRequired,
-  };
+EcoEcho.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+};
   
-  export default EcoEcho; 
+export default EcoEcho; 
