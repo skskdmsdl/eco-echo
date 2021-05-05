@@ -5,7 +5,6 @@ import { Menu } from 'antd';
 
 import SearchForm from './SearchForm';
 import LoginForm from './LoginForm';
-import SearchForm from './SearchForm';
 
 const AppLayout = ({ children }) => {
     return (
