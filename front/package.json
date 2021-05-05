@@ -10,11 +10,11 @@
   "author": "TwoSliver",
   "license": "ISC",
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "antd": "^4.15.4",
     "next": "^9.5.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.4",
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
