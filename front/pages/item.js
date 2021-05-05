@@ -6,7 +6,7 @@ import ItemList from '../components/ItemList';
 const Item = () => {
     return (
         <AppLayout>
-             <ItemList />
+            <ItemList />
         </AppLayout>
     );
 };
