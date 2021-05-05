@@ -2,6 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/": "pages/index.js",
   "/item": "pages/item.js"
+=======
+  "/item": "pages/item.js",
+  "/shop": "pages/shop.js"
+>>>>>>> 0dec7c93d00e7d250fe9ef99edd8974a6a6bbc22
 }
