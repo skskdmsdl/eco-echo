@@ -7,6 +7,12 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
+#intelliJ
+.idea
+local.properties
+*.iml
+
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -15,7 +21,7 @@
 .idea/**/shelf
 
 # dependencies
-front/node_modules
+**/node_modules/
 /.pnp
 .pnp.js
 
@@ -37,18 +43,12 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-#intelliJ
-build/
-.idea
-local.properties
-*.iml
-
 #.lock
 package-lock.json
 yarn.lock
 
 # Next.js build output
-front/.next
+**/.next/
 
 # Nuxt.js build / generate output
 .nuxt
