@@ -12,7 +12,52 @@ const dummy = {
     isLoggedIn: [],
 };
 
-const AppLayout = ({ children }) => {  
+const AppLayout = ({ children }) => {
+
+    const [visible, setVisible] = useState(false);
+
+    // const handleMenuClick = e => {
+    //     if (e.key === '3') {
+    //         setVisible(false);
+    //     }
+    // };
+
+    const handleVisibleChange = flag => {
+        setVisible(flag);
+    };
+
+    // More 메뉴 시작
+    const { SubMenu } = Menu;
+
+    const handleClick = e => {
+        console.log('click ', e);
+    };
+
+    const menu = (
+        <Menu onClick={handleClick} mode="horizontal">
+            <Menu.Item key="CurrentShop" icon={<TagsTwoTone />}>
+                <Link href="#"><a>최근 본 샵</a></Link>
+            </Menu.Item>
+            <Menu.Item key="CurrentItem" icon={<SkinTwoTone />}>
+                <Link href="#"><a>최근 본 상품</a></Link>
+            </Menu.Item>
+            <Menu.Item key="MyShop" icon={<ShopTwoTone />}>
+                <Link href="#"><a>MY SHOP</a></Link>
+            </Menu.Item>
+            <Menu.Item key="LikeItem" icon={<HeartTwoTone />}>
+                <Link href="#"><a>관심상품</a></Link>
+            </Menu.Item>
+            <Menu.Item key="QNA" icon={<MessageTwoTone />}>
+                <Link href="#"><a>1:1 문의</a></Link>
+            </Menu.Item>
+            <Menu.Item key="Company" icon={<ProfileTwoTone />}>
+                <Link href="#"><a>소개 및 약관</a></Link>
+            </Menu.Item>
+
+        </Menu>
+    );
+    // More 메뉴 끝
+
     return (
         <>
             <Menu mode="horizontal">
@@ -23,10 +68,19 @@ const AppLayout = ({ children }) => {
                     <Link href='/item'><a>상품</a></Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Link href='/'><a>더보기</a></Link>
+                    <Dropdown
+                        overlay={menu}
+                        onVisibleChange={handleVisibleChange}
+                        visible={visible}
+                    >
+                        <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                            MORE <DownOutlined />
+                        </a>
+                    </Dropdown>
                 </Menu.Item>
                 {dummy.isLoggedIn ? <SettingForm /> : <LoginForm />}
                 <SearchForm />
+                <LoginForm />
             </Menu>
             {children}
         </>
