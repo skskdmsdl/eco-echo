@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { Menu, Dropdown } from 'antd';
-import { DownOutlined, TagsTwoTone, SkinTwoTone, ShopTwoTone, HeartTwoTone, MessageTwoTone, ProfileTwoTone } from '@ant-design/icons';
+import { Menu } from 'antd';
 
 import SearchForm from './SearchForm';
 import LoginForm from './LoginForm';
+import SettingForm from './SettingForm';
+
+const dummy = {
+    nickname: '에코에코',
+    isLoggedIn: [],
+};
 
 const AppLayout = ({ children }) => {
 
@@ -73,6 +78,7 @@ const AppLayout = ({ children }) => {
                         </a>
                     </Dropdown>
                 </Menu.Item>
+                {dummy.isLoggedIn ? <SettingForm /> : <LoginForm />}
                 <SearchForm />
                 <LoginForm />
             </Menu>
