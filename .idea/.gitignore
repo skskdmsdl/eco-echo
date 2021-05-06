@@ -22,6 +22,7 @@ local.properties
 
 # dependencies
 **/node_modules/
+node_modules
 /.pnp
 .pnp.js
 
@@ -49,10 +50,11 @@ yarn.lock
 
 # Next.js build output
 **/.next/
+.next
 
 # Nuxt.js build / generate output
 .nuxt
 dist
 
 # rollup.js default build output
-dist/
+/dist/

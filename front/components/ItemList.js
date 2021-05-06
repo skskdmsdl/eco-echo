@@ -1,40 +1,38 @@
-import React from 'react';
-import { Card, Avatar, Row, Col, Select, Typography, Switch } from 'antd';
-import {EditOutlined, EllipsisOutlined, HeartOutlined, SettingOutlined} from '@ant-design/icons';
+import React, { useState } from 'react';
+import { Card, Avatar, Row, Col, Select, Typography } from 'antd';
+import { EditOutlined, EllipsisOutlined, HeartOutlined, HeartFilled, SettingOutlined } from '@ant-design/icons';
 import styled from "styled-components";
-
-const { Text, Link } = Typography;
-const { Meta } = Card;
-const { Option } = Select;
-const children = [];
-for (let i = 10; i < 36; i++) {
-    children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
-}
-
-const AppDiv = styled.div`
-    width: 80%;
-    margin: 0 auto;
-    padding: 0.5rem;
-    flex: 1;
-    flex-direction: 'row';
-    justifyContent: 'space-between';
-`;
-
-const AppBlock = styled.div`
-  margin: 0 auto;
-  margin-top: 2rem;
-  padding: 1rem;
-`;
-
-function handleChange(value) {
-    console.log(`Selected: ${value}`);
-}
-
-function onChange(checked) {
-    console.log(`switch to ${checked}`);
-}
+import OneItem from '../components/OneItem'
 
 const ItemList = () => {
+
+    const { Option } = Select;
+
+    const children = [];
+    for (let i = 10; i < 36; i++) {
+        children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+    }
+
+    const AppDiv = styled.div`
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem;
+        flex: 1;
+        flex-direction: 'row';
+        justifyContent: 'space-between';
+`;
+
+    const AppBlock = styled.div`
+        margin: 0 auto;
+        margin-top: 2rem;
+        
+`;
+
+    const handleChange = (value) => {
+        console.log(`Selected: ${value}`);
+    }
+
+
     return (
         <>
             <AppDiv>
@@ -43,125 +41,16 @@ const ItemList = () => {
                 </Select>
                 <AppBlock>
                     <Row gutter={[16,16]}>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-                        <Col span={4.5}>
-                            <Card
-                                hoverable
-                                style={{ width: 240 }}
-                                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                            >
-                                <Meta title="카사크롭 맨투맨" description="22,000" />
-                                <Link type="secondary" href="">히프나틱</Link>
-                                <div>
-                                    <HeartOutlined />
-                                </div>
-                            </Card>
-                        </Col>
-
-
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
+                        <OneItem />
                     </Row>
                 </AppBlock>
             </AppDiv>
