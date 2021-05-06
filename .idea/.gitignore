@@ -7,6 +7,15 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
+<<<<<<< HEAD
+=======
+#intelliJ
+.idea
+local.properties
+*.iml
+
+
+>>>>>>> f9377df56990f77814f2a810a9ccf91bdc9c2144
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -15,7 +24,11 @@
 .idea/**/shelf
 
 # dependencies
+<<<<<<< HEAD
 /node_modules
+=======
+**/node_modules/
+>>>>>>> f9377df56990f77814f2a810a9ccf91bdc9c2144
 /.pnp
 .pnp.js
 
@@ -37,18 +50,25 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+<<<<<<< HEAD
 #intelliJ
 build/
 .idea
 local.properties
 *.iml
 
+=======
+>>>>>>> f9377df56990f77814f2a810a9ccf91bdc9c2144
 #.lock
 package-lock.json
 yarn.lock
 
 # Next.js build output
+<<<<<<< HEAD
 .next
+=======
+**/.next/
+>>>>>>> f9377df56990f77814f2a810a9ccf91bdc9c2144
 
 # Nuxt.js build / generate output
 .nuxt

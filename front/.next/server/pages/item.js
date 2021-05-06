@@ -134,10 +134,10 @@ var _jsxFileName = "D:\\euni\\workspaces\\eco-echo\\front\\components\\AppLayout
 
 
 
-
 const AppLayout = ({
   children
 }) => {
+
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["Fragment"], {
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"], {
       mode: "horizontal",
@@ -281,7 +281,10 @@ const AppDiv = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
 const AppBlock = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
   margin: 0 auto;
   margin-top: 2rem;
+<<<<<<< HEAD
+=======
   border: 1px solid black;
+>>>>>>> 0dec7c93d00e7d250fe9ef99edd8974a6a6bbc22
   padding: 1rem;
 `;
 
@@ -732,6 +735,7 @@ const ItemList = () => {
               }, void 0, false, {
                 fileName: _jsxFileName,
                 lineNumber: 157,
+>>>>>>> 0dec7c93d00e7d250fe9ef99edd8974a6a6bbc22
                 columnNumber: 33
               }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(Link, {
                 type: "secondary",
