@@ -5,8 +5,14 @@ import { Menu } from 'antd';
 
 import SearchForm from './SearchForm';
 import LoginForm from './LoginForm';
+import SettingForm from './SettingForm';
 
-const AppLayout = ({ children }) => {
+const dummy = {
+    nickname: '에코에코',
+    isLoggedIn: [],
+};
+
+const AppLayout = ({ children }) => {  
     return (
         <>
             <Menu mode="horizontal">
@@ -19,8 +25,8 @@ const AppLayout = ({ children }) => {
                 <Menu.Item>
                     <Link href='/'><a>더보기</a></Link>
                 </Menu.Item>
+                {dummy.isLoggedIn ? <SettingForm /> : <LoginForm />}
                 <SearchForm />
-                <LoginForm />
             </Menu>
             {children}
         </>
