@@ -164,7 +164,7 @@ const LoginForm = () => {
 
     return (
         <>
-            <ButtonWrapper type="primary" onClick={showDrawer}>
+            <ButtonWrapper onClick={showDrawer}>
                 로그인
             </ButtonWrapper>
             
@@ -438,7 +438,7 @@ const LoginForm = () => {
                         경찰청 사이버안전국 (cyberbureau.police.go.kr / 국번없이 182)</p>
                     </DivWrapper>
                     <CheckWrapper onChange={onChange}>개인정보처리방침에 동의합니다.</CheckWrapper>
-                    <ButtonStyle type="primary" htmlType="submit">가입완료</ButtonStyle>
+                    <ButtonStyle htmlType="submit">가입완료</ButtonStyle>
                 </Form>                
             </Drawer>
             :
