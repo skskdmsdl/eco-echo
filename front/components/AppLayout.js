@@ -51,7 +51,7 @@ const AppLayout = ({ children }) => {
                 <Link href="#"><a>1:1 문의</a></Link>
             </Menu.Item>
             <Menu.Item key="Company" icon={<ProfileTwoTone />}>
-                <Link href="/company"><a>소개 및 약관</a></Link>
+                <Link href="/more/company"><a>소개 및 약관</a></Link>
             </Menu.Item>
 
         </Menu>
