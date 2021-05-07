@@ -3,6 +3,7 @@ import { Card, Avatar, Row, Col, Select, Typography } from 'antd';
 import { EditOutlined, EllipsisOutlined, HeartOutlined, HeartFilled, SettingOutlined } from '@ant-design/icons';
 import styled from "styled-components";
 import OneItem from '../components/OneItem'
+import SelectCategoryForm from '../components/SelectCategoryForm';
 
 const ItemList = () => {
 
@@ -28,19 +29,14 @@ const ItemList = () => {
         
 `;
 
-    const handleChange = (value) => {
-        console.log(`Selected: ${value}`);
-    }
-
 
     return (
         <>
             <AppDiv>
-                <Select size='default' defaultValue="a1" onChange={handleChange} style={{ width: 200 }}>
-                    {children}
-                </Select>
+                <SelectCategoryForm value={children} />
                 <AppBlock>
-                    <Row gutter={[16,16]}>
+                    <Row gutter={[16,16]} justify='center'>
+                        {/* 데이터만큼 반복 */}
                         <OneItem />
                         <OneItem />
                         <OneItem />

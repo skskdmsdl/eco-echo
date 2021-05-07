@@ -36,7 +36,7 @@ const AppLayout = ({ children }) => {
     const menu = (
         <Menu onClick={handleClick} mode="horizontal">
             <Menu.Item key="CurrentShop" icon={<TagsTwoTone />}>
-                <Link href="#"><a>최근 본 샵</a></Link>
+                <Link href="/currentShop"><a>최근 본 샵</a></Link>
             </Menu.Item>
             <Menu.Item key="CurrentItem" icon={<SkinTwoTone />}>
                 <Link href="#"><a>최근 본 상품</a></Link>

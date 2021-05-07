@@ -3,6 +3,7 @@ import { Card, Avatar, Row, Col, Select, Input } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import OneShop from '../components/OneShop'
+import SelectCategoryForm from '../components/SelectCategoryForm'
 
 const { Meta } = Card;
 const { Option } = Select;
@@ -27,22 +28,16 @@ const AppBlock = styled.div`
   margin-top: 2rem;
 `;
 
-function handleChange(value) {
-    console.log(`Selected: ${value}`);
-}
-
 const onSearch = value => console.log(value);
 
 const ShopList = () => {
     return (
         <>
         <AppDiv>
-            <Select size='default' defaultValue="a1" onChange={handleChange} style={{ width: 200 }}>
-                {children}
-            </Select>
+            <SelectCategoryForm value={children} />
             <Search placeholder="쇼핑몰 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
             <AppBlock>
-                <Row gutter={[16,16]}>
+                <Row gutter={[16,16]} justify='center'>
                     <OneShop />
                     <OneShop />
                     <OneShop />
