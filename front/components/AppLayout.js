@@ -39,7 +39,7 @@ const AppLayout = ({ children }) => {
                 <Link href="/currentShop"><a>최근 본 샵</a></Link>
             </Menu.Item>
             <Menu.Item key="CurrentItem" icon={<SkinTwoTone />}>
-                <Link href="#"><a>최근 본 상품</a></Link>
+                <Link href="/currentItem"><a>최근 본 상품</a></Link>
             </Menu.Item>
             <Menu.Item key="MyShop" icon={<ShopTwoTone />}>
                 <Link href="#"><a>MY SHOP</a></Link>
