@@ -5,7 +5,6 @@ import AppLayout from '../../components/AppLayout';
 import More from "../../components/More";
 import { ContentWrapper } from './styles';
 
-
 const Company = () => {
     return (
         <AppLayout>
