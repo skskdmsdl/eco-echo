@@ -164,7 +164,7 @@ const LoginForm = () => {
 
     return (
         <>
-            <ButtonWrapper type='primary' onClick={showDrawer}>
+            <ButtonWrapper onClick={showDrawer}>
                 로그인
             </ButtonWrapper>
             
