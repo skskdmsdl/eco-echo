@@ -1,4 +1,5 @@
 import { Select } from 'antd';
+import styled from 'styled-components'
 
 const SelectCategoryForm = (props) => {
 
@@ -6,10 +7,14 @@ const SelectCategoryForm = (props) => {
         console.log(`Selected: ${value}`);
     }
 
+    const SelectStyle = styled(Select)`
+        margin: 1rem;
+    `;
+
     return (
-        <Select size='default' defaultValue="a1" onChange={handleChange} style={{ width: 200 }}>
+        <SelectStyle size='default' defaultValue="a1" onChange={handleChange} style={{ width: 200 }}>
             {props.value}
-        </Select>
+        </SelectStyle>
     );
 }
 
