@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { List, Avatar } from 'antd';
 
 import AppLayout from '../../components/AppLayout';
-import More from "../../components/More";
 import { ContentWrapper } from './styles';
 
 const Company = () => {
@@ -12,10 +11,9 @@ const Company = () => {
             <Head>
                 <title>1:1 문의</title>
             </Head>
-            <More />
             <List
                 itemLayout="horizontal"
-                dataSource={data}
+                // dataSource={data}
                 renderItem={item => (
                 <List.Item>
                     <List.Item.Meta
