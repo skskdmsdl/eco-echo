@@ -44,8 +44,8 @@ const AppLayout = ({ children }) => {
             <Menu.Item key="MyShop" icon={<ShopTwoTone />}>
                 <Link href="/myShop"><a>MY SHOP</a></Link>
             </Menu.Item>
-            <Menu.Item key="LikeItem" icon={<HeartTwoTone />}>
-                <Link href="#"><a>관심상품</a></Link>
+            <Menu.Item key="FavoriteItem" icon={<HeartTwoTone />}>
+                <Link href="/favoriteItem"><a>관심상품</a></Link>
             </Menu.Item>
             <Menu.Item key="QNA" icon={<MessageTwoTone />}>
                 <Link href="/more/qna"><a>1:1 문의</a></Link>

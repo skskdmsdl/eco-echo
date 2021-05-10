@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Avatar, Row, Col, Select, Typography } from 'antd';
+import { Card, Avatar, Row, Col, Select, Typography, Divider } from 'antd';
 import { EditOutlined, EllipsisOutlined, HeartOutlined, HeartFilled, SettingOutlined } from '@ant-design/icons';
 import styled from "styled-components";
 import OneItem from '../components/OneItem'
@@ -33,6 +33,7 @@ const ItemList = () => {
     return (
         <>
             <AppDiv>
+                <Divider><h2>상품</h2></Divider>
                 <SelectCategoryForm value={children} />
                 <AppBlock>
                     <Row gutter={[16,16]} justify='center'>
