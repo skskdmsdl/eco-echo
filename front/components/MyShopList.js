@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Avatar, Row } from 'antd';
+import { Avatar, Row, Pagination, PageHeader, Select } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import OneItem from '../components/OneItem'
 import SelectCategory from '../components/SelectCategoryForm'
 
 const MyShopList = () => {
+
+    const { Option } = Select;
 
     const children = [];
     for (let i = 10; i < 36; i++) {
@@ -35,11 +37,19 @@ const MyShopList = () => {
         <>
             <AppDiv>
                 <MyShopHeader>
-                    <h3>My Shop</h3>
-                    <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
-                    <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
-                    <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
-                    <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
+                    <PageHeader
+                        ghost={false}
+                        onBack={() => window.history.back()}
+                        title="My Shop"
+                        extra={[
+                            <Pagination simple defaultCurrent={1} total={50} />
+                        ]}
+                    >
+                        <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
+                        <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
+                        <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
+                        <AvatarStyle size={64} src="https://topclass.chosun.com/news_img/1807/1807_008.jpg" />
+                    </PageHeader>
                 </MyShopHeader>
                 <SelectCategory value={children}/>
                 <Row gutter={[16,16]} justify='center'>
