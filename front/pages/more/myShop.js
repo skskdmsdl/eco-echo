@@ -1,6 +1,6 @@
 import React from 'react';
-import AppLayout from '../components/AppLayout';
-import MyShopList from '../components/MyShopList';
+import AppLayout from '../../components/AppLayout';
+import MyShopList from '../../components/MyShopList';
 
 const MyShop = () => {
 

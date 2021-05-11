@@ -39,13 +39,13 @@ const AppLayout = ({ children }) => {
                 <Link href="/currentShop"><a>최근 본 샵</a></Link>
             </Menu.Item>
             <Menu.Item key="CurrentItem" icon={<SkinTwoTone />}>
-                <Link href="/currentItem"><a>최근 본 상품</a></Link>
+                <Link href="/more/currentItem"><a>최근 본 상품</a></Link>
             </Menu.Item>
             <Menu.Item key="MyShop" icon={<ShopTwoTone />}>
-                <Link href="/myShop"><a>MY SHOP</a></Link>
+                <Link href="/more/myShop"><a>MY SHOP</a></Link>
             </Menu.Item>
             <Menu.Item key="FavoriteItem" icon={<HeartTwoTone />}>
-                <Link href="/favoriteItem"><a>관심상품</a></Link>
+                <Link href="/more/favoriteItem"><a>관심상품</a></Link>
             </Menu.Item>
             <Menu.Item key="QNA" icon={<MessageTwoTone />}>
                 <Link href="/more/qna"><a>1:1 문의</a></Link>
@@ -53,6 +53,10 @@ const AppLayout = ({ children }) => {
             <Menu.Item key="Company" icon={<ProfileTwoTone />}>
                 <Link href="/more/company"><a>소개 및 약관</a></Link>
             </Menu.Item>
+            <Menu.Item key="MarketingCenter" icon={<ShopTwoTone />}>
+                <Link href="/more/marketingCenter"><a>마케팅 센터</a></Link>
+            </Menu.Item>
+
 
         </Menu>
     );
