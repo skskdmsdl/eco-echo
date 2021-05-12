@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { List, Avatar, Button } from 'antd';
 
 import AppLayout from '../../components/AppLayout';
-import { ContentWrapper } from './styles';
+import { DivWrapper } from './styles';
 
 const Company = () => {
     return (
@@ -12,8 +12,10 @@ const Company = () => {
                 <title>1:1 문의</title>
             </Head>
             <div>
-                <span>1:1 문의</span>
-                <Button shape="round">문의 등록</Button>
+                <DivWrapper>
+                    <p>1:1 문의</p>
+                    <Button shape="round">문의 등록</Button>
+                </DivWrapper>
                 <List
                     itemLayout="horizontal"
                     // dataSource={data}
