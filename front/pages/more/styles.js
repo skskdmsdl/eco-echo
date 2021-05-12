@@ -5,6 +5,16 @@ export const Global = createGlobalStyle`
     background: F3F7FA;
 `;
 
+export const DivWrapper = styled.div` 
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    p {
+        font-weight: 700;
+    }
+`;
+
 export const ContentWrapper = styled.div` 
     margin: 0 33px ;
     padding: 60px;
