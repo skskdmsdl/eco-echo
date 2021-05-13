@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
+import Link from 'next/link';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 
@@ -60,9 +61,11 @@ const MarketingCenterLogin = () => {
 
             <Form.Item>
                 <Button type="primary" htmlType="submit" className="login-form-button">
-                    Log in
+                    <Link href='/shopSettingMain'>로그인</Link>
                 </Button>
-                Or <a href="">register now!</a>
+                <Button type="secondary" className="login-form-button">
+                    회원가입
+                </Button>
             </Form.Item>
         </FormStyle>
     );
