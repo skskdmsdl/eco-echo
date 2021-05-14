@@ -48,7 +48,7 @@ const AppLayout = ({ children }) => {
                 <Link href="/more/favoriteItem"><a>관심상품</a></Link>
             </Menu.Item>
             <Menu.Item key="QNA" icon={<MessageTwoTone />}>
-                <Link href="/more/qna"><a>1:1 문의</a></Link>
+                <Link href="/qna"><a>1:1 문의</a></Link>
             </Menu.Item>
             <Menu.Item key="Company" icon={<ProfileTwoTone />}>
                 <Link href="/more/company"><a>소개 및 약관</a></Link>
