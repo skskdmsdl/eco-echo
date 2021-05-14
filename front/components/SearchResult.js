@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Avatar, Title, Typography, Row, Col } from 'antd';
+import { Card, Avatar, Title, Typography, Row, Col, Divider } from 'antd';
 import { ShopOutlined, InboxOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import SearchResultShop from '../components/SearchResultShop';
@@ -31,7 +31,9 @@ const SearchResult = () => {
             
             {/* 쇼핑몰 검색 결과 */}
             <div style={{marginBottom: '1.5rem'}}>
-                <Title level={4}><ShopOutlined /> 쇼핑몰</Title>
+                <Divider orientation="left">
+                    <Title level={4}><ShopOutlined /> 쇼핑몰</Title>
+                </Divider>
                 <Row gutter={[16,16]} justify='start'>
                     <SearchResultShop />
                     <SearchResultShop />
@@ -44,7 +46,9 @@ const SearchResult = () => {
             
             {/* 상품 검색 결과 */}
             <div>
-                <Title level={4}><InboxOutlined />상품</Title>
+                <Divider orientation="left">
+                    <Title level={4}><InboxOutlined />상품</Title>
+                </Divider>
                 <Row gutter={[16,16]} justify='start'>
                     <OneItem />
                     <OneItem />
