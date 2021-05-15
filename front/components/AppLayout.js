@@ -6,6 +6,7 @@ import { TagsTwoTone, SkinTwoTone, ShopTwoTone, HeartTwoTone, MessageTwoTone, Pr
 import SearchForm from './SearchForm';
 import LoginForm from './LoginForm';
 import SettingForm from './SettingForm';
+import CurrentItemPopup from '../components/CurrentItemPopup';
 
 const dummy = {
     nickname: '에코에코',
@@ -36,7 +37,7 @@ const AppLayout = ({ children }) => {
     const menu = (
         <Menu onClick={handleClick} mode="horizontal">
             <Menu.Item key="CurrentShop" icon={<TagsTwoTone />}>
-                <Link href="/currentShop"><a>최근 본 샵</a></Link>
+                <Link href="/more/currentShop"><a>최근 본 샵</a></Link>
             </Menu.Item>
             <Menu.Item key="CurrentItem" icon={<SkinTwoTone />}>
                 <Link href="/more/currentItem"><a>최근 본 상품</a></Link>
@@ -87,6 +88,7 @@ const AppLayout = ({ children }) => {
                 <LoginForm />
             </Menu>
             {children}
+            <CurrentItemPopup />
         </>
     );
 };
