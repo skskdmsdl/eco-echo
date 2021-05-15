@@ -5,3 +5,5 @@
 
 
 # Skills
+* JavaScript
+* React
