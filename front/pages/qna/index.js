@@ -1,11 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { List, Avatar, Button } from 'antd';
 
 import AppLayout from '../../components/AppLayout';
 import { DivWrapper } from './styles';
 
-const Company = () => {
+const Qna = () => {
     return (
         <AppLayout>
             <Head>
@@ -14,7 +15,7 @@ const Company = () => {
             <div>
                 <DivWrapper>
                     <p>1:1 문의</p>
-                    <Button shape="round">문의 등록</Button>
+                    <Link href="/qna/new"><Button shape="round">문의 등록</Button></Link>
                 </DivWrapper>
                 <List
                     itemLayout="horizontal"
@@ -34,4 +35,4 @@ const Company = () => {
     );
 };
 
-export default Company;
+export default Qna;
