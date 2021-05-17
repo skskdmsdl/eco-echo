@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Avatar } from 'antd';
+import { Avatar, Pagination } from 'antd';
+import ReactPaginate from "react-paginate";
 
 
 const CurrentItemPopup = () => {
+
 
     const PopupStyle = styled.div`
         text-align: center;
@@ -13,15 +15,19 @@ const CurrentItemPopup = () => {
         border: 1px solid #aacd6e;
         position: fixed;
         z-index: 1;
+        padding: 0.3rem;
+    `;
+
+    const AvatarStyle = styled(Avatar)`
+        margin: 0.5rem;
     `;
     
     return(
             <PopupStyle>
                 <strong>최근 본 상품</strong>
-                <Avatar shape="square" size={64} src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" />
-                <Avatar shape="square" size={64} src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" />
-                <Avatar shape="square" size={64} src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" />
-
+                <AvatarStyle shape="square" size={64} src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" />
+                <AvatarStyle shape="square" size={64} src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" />
+                <AvatarStyle shape="square" size={64} src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" />
             </PopupStyle>
     );
 
