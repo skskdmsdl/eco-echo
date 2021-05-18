@@ -42,7 +42,7 @@ const CurrentShopList = () => {
                         전체 삭제
                     </ButtonStyle>
                 </ButtonWrapper>
-                <Row gutter={[16,16]} justify='center'>
+                <Row gutter={[16,16]} justify='start'  style={{padding:'1rem'}}>
                     {/* 데이터 수만큼 반복 */}
                     <OneShop />
                     <OneShop />

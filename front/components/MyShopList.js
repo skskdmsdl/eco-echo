@@ -52,7 +52,7 @@ const MyShopList = () => {
                     </PageHeader>
                 </MyShopHeader>
                 <SelectCategory value={children}/>
-                <Row gutter={[16,16]} justify='center'>
+                <Row gutter={[16,16]} justify='start' style={{padding:'1rem'}}>
                     <OneItem />
                     <OneItem />
                     <OneItem />
