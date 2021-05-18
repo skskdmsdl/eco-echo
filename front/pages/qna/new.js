@@ -6,21 +6,9 @@ import { Form, Input, InputNumber, Button } from 'antd';
 import AppLayout from '../../components/AppLayout';
 import { DivWrapper, InputWrapper } from './styles';
 
-// const layout = {
-//     labelCol: { span: 8 },
-//     wrapperCol: { span: 16 },
-// };
-
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
     required: '${name}을 입력하세요',
-    // types: {
-    // email: '${label} is not a valid email!',
-    // number: '${label} is not a valid number!',
-    // },
-    // number: {
-    // range: '${label} must be between ${min} and ${max}',
-    // },
 };
 /* eslint-enable no-template-curly-in-string */
 
@@ -57,6 +45,5 @@ const NewQna = () => {
         </AppLayout>
     );
 };
-
 
 export default NewQna;
