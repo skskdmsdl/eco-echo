@@ -41,6 +41,7 @@ const SearchResult = () => {
                     <SearchResultShop />
                     <SearchResultShop />
                     <SearchResultShop />
+                    <SearchResultShop />
                 </Row>
             </div>
             
@@ -49,7 +50,7 @@ const SearchResult = () => {
                 <Divider orientation="left">
                     <Title level={4}><InboxOutlined />상품</Title>
                 </Divider>
-                <Row gutter={[16,16]} justify='start'>
+                <Row gutter={[16,16]} justify='start' >
                     <OneItem />
                     <OneItem />
                     <OneItem />

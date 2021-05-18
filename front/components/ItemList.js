@@ -26,6 +26,7 @@ const ItemList = () => {
     const AppBlock = styled.div`
         margin: 0 auto;
         margin-top: 2rem;
+        padding: 1rem;
         
     `;
 
@@ -36,8 +37,9 @@ const ItemList = () => {
                 <Divider><h2>상품</h2></Divider>
                 <SelectCategoryForm value={children} />
                 <AppBlock>
-                    <Row gutter={[16,16]} justify='center'>
+                    <Row gutter={[16,16]} justify='start'>
                         {/* 데이터만큼 반복 */}
+                        <OneItem />
                         <OneItem />
                         <OneItem />
                         <OneItem />

@@ -25,7 +25,7 @@ const SpanWrapper = styled.span`
 `;
 
 const SearchForm = () => {
-    const onSearch = value => console.log(value);
+    const onSearch = (value) => console.log(value);
 
     return (
         <SpanWrapper>
