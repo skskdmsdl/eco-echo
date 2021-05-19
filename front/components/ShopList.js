@@ -28,6 +28,10 @@ const AppBlock = styled.div`
   margin-top: 2rem;
 `;
 
+const SearchStyle = styled(Search)`
+    margin: 1rem;
+`;
+
 const onSearch = value => console.log(value);
 
 const ShopList = () => {
@@ -35,7 +39,7 @@ const ShopList = () => {
         <>
         <AppDiv>
             <SelectCategoryForm value={children} />
-            <Search placeholder="쇼핑몰 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
+            <SearchStyle placeholder="쇼핑몰 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
             <AppBlock>
                 <Row gutter={[16,16]} justify='center'>
                     <OneShop />

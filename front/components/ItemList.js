@@ -21,13 +21,13 @@ const ItemList = () => {
         flex: 1;
         flex-direction: 'row';
         justifyContent: 'space-between';
-`;
+    `;
 
     const AppBlock = styled.div`
         margin: 0 auto;
         margin-top: 2rem;
         
-`;
+    `;
 
 
     return (

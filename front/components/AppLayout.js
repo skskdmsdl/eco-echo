@@ -42,7 +42,7 @@ const AppLayout = ({ children }) => {
                 <Link href="/currentItem"><a>최근 본 상품</a></Link>
             </Menu.Item>
             <Menu.Item key="MyShop" icon={<ShopTwoTone />}>
-                <Link href="#"><a>MY SHOP</a></Link>
+                <Link href="/myShop"><a>MY SHOP</a></Link>
             </Menu.Item>
             <Menu.Item key="LikeItem" icon={<HeartTwoTone />}>
                 <Link href="#"><a>관심상품</a></Link>
