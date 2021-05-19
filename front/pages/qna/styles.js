@@ -13,6 +13,15 @@ export const DivWrapper = styled.div`
     p {
         font-weight: 700;
     }
+    div a {
+        padding-right: 30px;
+        color: black;
+    }
+`;
+
+export const InputWrapper = styled.div` 
+    padding: 0 250px;
+
 `;
 
 export const ContentWrapper = styled.div` 
