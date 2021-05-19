@@ -6,6 +6,7 @@ import { TagsTwoTone, SkinTwoTone, ShopTwoTone, HeartTwoTone, MessageTwoTone, Pr
 import SearchForm from './SearchForm';
 import LoginForm from './LoginForm';
 import SettingForm from './SettingForm';
+import CurrentItemPopup from '../components/CurrentItemPopup';
 
 const dummy = {
     nickname: '에코에코',
@@ -34,18 +35,18 @@ const AppLayout = ({ children }) => {
     };
 
     const menu = (
-        <Menu onClick={handleClick} mode="horizontal">
+        <Menu onClick={handleClick} >
             <Menu.Item key="CurrentShop" icon={<TagsTwoTone />}>
-                <Link href="/currentShop"><a>최근 본 샵</a></Link>
+                <Link href="/more/currentShop"><a>최근 본 샵</a></Link>
             </Menu.Item>
             <Menu.Item key="CurrentItem" icon={<SkinTwoTone />}>
-                <Link href="/currentItem"><a>최근 본 상품</a></Link>
+                <Link href="/more/currentItem"><a>최근 본 상품</a></Link>
             </Menu.Item>
             <Menu.Item key="MyShop" icon={<ShopTwoTone />}>
-                <Link href="/myShop"><a>MY SHOP</a></Link>
+                <Link href="/more/myShop"><a>MY SHOP</a></Link>
             </Menu.Item>
-            <Menu.Item key="LikeItem" icon={<HeartTwoTone />}>
-                <Link href="#"><a>관심상품</a></Link>
+            <Menu.Item key="FavoriteItem" icon={<HeartTwoTone />}>
+                <Link href="/more/favoriteItem"><a>관심상품</a></Link>
             </Menu.Item>
             <Menu.Item key="QNA" icon={<MessageTwoTone />}>
                 <Link href="/qna"><a>1:1 문의</a></Link>
@@ -53,6 +54,10 @@ const AppLayout = ({ children }) => {
             <Menu.Item key="Company" icon={<ProfileTwoTone />}>
                 <Link href="/more/company"><a>소개 및 약관</a></Link>
             </Menu.Item>
+            <Menu.Item key="MarketingCenter" icon={<ShopTwoTone />}>
+                <Link href="/more/marketingCenter"><a>마케팅 센터</a></Link>
+            </Menu.Item>
+
 
         </Menu>
     );
@@ -83,6 +88,7 @@ const AppLayout = ({ children }) => {
                 <LoginForm />
             </Menu>
             {children}
+            <CurrentItemPopup />
         </>
     );
 };

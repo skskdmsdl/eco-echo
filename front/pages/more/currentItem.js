@@ -1,6 +1,6 @@
 import React from 'react';
-import AppLayout from '../components/AppLayout'
-import CurrentItemList from '../components/CurrentItemList'
+import AppLayout from '../../components/AppLayout'
+import CurrentItemList from '../../components/CurrentItemList'
 
 const CurrentItem = () => {
 

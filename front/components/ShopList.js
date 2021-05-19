@@ -1,5 +1,5 @@
 import React, { useCallback }  from 'react';
-import { Card, Avatar, Row, Col, Select, Input } from 'antd';
+import { Card, Avatar, Row, Col, Select, Input, Divider } from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import OneShop from '../components/OneShop'
@@ -26,6 +26,7 @@ const AppDiv = styled.div`
 const AppBlock = styled.div`
   margin: 0 auto;
   margin-top: 2rem;
+  padding: 1rem;
 `;
 
 const SearchStyle = styled(Search)`
@@ -38,10 +39,11 @@ const ShopList = () => {
     return (
         <>
         <AppDiv>
+            <Divider><h2>쇼핑몰</h2></Divider>
             <SelectCategoryForm value={children} />
             <SearchStyle placeholder="쇼핑몰 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
             <AppBlock>
-                <Row gutter={[16,16]} justify='center'>
+                <Row gutter={[16,16]} justify='start'>
                     <OneShop />
                     <OneShop />
                     <OneShop />

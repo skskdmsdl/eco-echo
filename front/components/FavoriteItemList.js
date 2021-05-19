@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Row, Divider } from 'antd';
-import OneShop from '../components/OneShop'
+import OneItem from '../components/OneItem'
 
-const CurrentShopList = () => {
-
+const FavoriteItemList = () => {
     const Title = styled.div`
         margin: 1.5rem 0;
         text-align: center;
@@ -31,10 +30,10 @@ const CurrentShopList = () => {
         }
     `;
 
-    return (
+    return(
         <>
             <Title>
-                <Divider><h2>최근 본 샵</h2></Divider>
+                <Divider><h2>관심상품</h2></Divider>
             </Title>
             <AppDiv>
                 <ButtonWrapper>
@@ -42,21 +41,21 @@ const CurrentShopList = () => {
                         전체 삭제
                     </ButtonStyle>
                 </ButtonWrapper>
-                <Row gutter={[16,16]} justify='start'  style={{padding:'1rem'}}>
+                <Row gutter={[16,16]} justify='center'>
                     {/* 데이터 수만큼 반복 */}
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
-                    <OneShop />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
+                    <OneItem />
                 </Row>
             </AppDiv>
         </>
-    );
+    )
 }
 
-export default CurrentShopList;
+export default FavoriteItemList;

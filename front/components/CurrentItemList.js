@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Row } from 'antd';
+import { Button, Row, Divider } from 'antd';
 import OneItem from '../components/OneItem'
 
 const CurrentItemList = () => {
@@ -34,7 +34,7 @@ const CurrentItemList = () => {
     return(
         <>
             <Title>
-                <h2>최근 본 상품</h2>
+                <Divider><h2>최근 본 상품</h2></Divider>
             </Title>
             <AppDiv>
                 <ButtonWrapper>
@@ -42,7 +42,7 @@ const CurrentItemList = () => {
                         전체 삭제
                     </ButtonStyle>
                 </ButtonWrapper>
-                <Row gutter={[16,16]} justify='center'>
+                <Row gutter={[16,16]} justify='start'  style={{padding:'1rem'}}>
                     {/* 데이터 수만큼 반복 */}
                     <OneItem />
                     <OneItem />
