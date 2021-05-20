@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Avatar, Pagination } from 'antd';
-import ReactPaginate from "react-paginate";
+// import ReactPaginate from "react-paginate";
 
 
 const CurrentItemPopup = () => {
