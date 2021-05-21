@@ -2,17 +2,16 @@ import React from 'react';
 import { Table, Tag, Space } from 'antd';
 
 import AppLayout from '../../components/AppLayout';
-import ItemList from "../../components/ItemList";
 
 const columns = [
   {
-    title: 'Name',
+    title: '상품명',
     dataIndex: 'name',
     key: 'name',
     render: text => <a>{text}</a>,
   },
   {
-    title: 'Age',
+    title: '가격',
     dataIndex: 'age',
     key: 'age',
   },
@@ -79,7 +78,11 @@ const data = [
 
 const NewItem = () => {
     return (
-        <Table columns={columns} dataSource={data} />
+      <AppLayout>
+        <div style={{padding: '150px'}} >
+          <Table columns={columns} dataSource={data} />
+        </div>
+      </AppLayout>
     );
 };
 
