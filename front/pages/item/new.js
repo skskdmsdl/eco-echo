@@ -1,87 +1,71 @@
-import React from 'react';
-import { Table, Tag, Space } from 'antd';
+import React, { useState } from 'react';
+import { Form, Input, Button, Upload } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
 
 import AppLayout from '../../components/AppLayout';
 
-const columns = [
-  {
-    title: '상품명',
-    dataIndex: 'name',
-    key: 'name',
-    render: text => <a>{text}</a>,
-  },
-  {
-    title: '가격',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
-  {
-    title: 'Tags',
-    key: 'tags',
-    dataIndex: 'tags',
-    render: tags => (
-      <>
-        {tags.map(tag => {
-          let color = tag.length > 5 ? 'geekblue' : 'green';
-          if (tag === 'loser') {
-            color = 'volcano';
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    render: (text, record) => (
-      <Space size="middle">
-        <a>Invite {record.name}</a>
-        <a>Delete</a>
-      </Space>
-    ),
-  },
-];
-
-const data = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-    tags: ['nice', 'developer'],
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    tags: ['loser'],
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-  },
-];
-
 const NewItem = () => {
+  const [form] = Form.useForm();
+  const [formLayout, setFormLayout] = useState('horizontal');
+
+  const onFormLayoutChange = ({ layout }) => {
+    setFormLayout(layout);
+  };
+
+  const formItemLayout =
+    formLayout === 'horizontal'
+      ? {
+          labelCol: {
+            span: 4,
+          },
+          wrapperCol: {
+            span: 14,
+          },
+        }
+      : null;
+  const buttonItemLayout =
+    formLayout === 'horizontal'
+      ? {
+          wrapperCol: {
+            span: 14,
+            offset: 4,
+          },
+        }
+      : null;
     return (
       <AppLayout>
-        <div style={{padding: '150px'}} >
-          <Table columns={columns} dataSource={data} />
-        </div>
+        <Form
+        style={{ padding: '150px' }}
+        {...formItemLayout}
+        layout={formLayout}
+        form={form}
+        initialValues={{ layout: formLayout }}
+        onValuesChange={onFormLayoutChange}
+      >
+        {/* <Form.Item label="Form Layout" name="layout">
+          <Radio.Group value={formLayout}>
+            <Radio.Button value="horizontal">Horizontal</Radio.Button>
+            <Radio.Button value="vertical">Vertical</Radio.Button>
+            <Radio.Button value="inline">Inline</Radio.Button>
+          </Radio.Group>
+        </Form.Item> */}
+        <Form.Item label="상품명">
+          <Input placeholder="input placeholder" />
+        </Form.Item>
+        <Form.Item label="가격">
+          <Input placeholder="input placeholder" />
+        </Form.Item>
+        <Upload
+          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+          listType="picture"
+          className="upload-list-inline"
+        >
+          <Button icon={<UploadOutlined />}>Upload</Button>
+        </Upload>
+        <Form.Item {...buttonItemLayout}>
+          <Button type="primary">Submit</Button>
+        </Form.Item>
+      </Form>
       </AppLayout>
     );
 };
