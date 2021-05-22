@@ -3,36 +3,9 @@ import AppLayout from '../../components/AppLayout'
 import styled from 'styled-components';
 import { Button, Row, Divider } from 'antd';
 import OneShop from '../../components/OneShop'
+import { Title, AppDiv, ButtonWrapper, ButtonStyle } from './styles';
 
 const CurrentShop = () => {
-
-
-    const Title = styled.div`
-        margin: 1.5rem 0;
-        text-align: center;
-    `;
-
-    const AppDiv = styled.div`
-        width: 80%;
-        margin: 1.5rem auto;
-    `;
-
-    const ButtonWrapper = styled.div`
-        margin: 1.5rem;
-        text-align: right;
-    `;
-
-    const ButtonStyle = styled(Button)`
-        border-color: #aacd6e;
-        color: #aacd6e;
-        
-        :hover {
-            background: #80c340;
-            border-color: #80c340;
-            color: white;
-        }
-    `;
-
 
     return (
         <AppLayout>

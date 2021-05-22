@@ -5,6 +5,8 @@ import { UserOutlined } from '@ant-design/icons';
 import AppLayout from '../../components/AppLayout';
 import SelectCategory from '../../components/SelectCategoryForm'
 import OneItem from '../../components/OneItem'
+import { MyShopAppDiv, MyShopHeader, AvatarStyle } from './styles';
+
 
 const MyShop = () => {
 
@@ -15,28 +17,9 @@ const MyShop = () => {
         children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
     }
 
-    const AppDiv = styled.div`
-        width: 80%;
-        margin: 0 auto;
-        padding: 1rem;
-        flex: 1;
-        flex-direction: 'row';
-        justifyContent: 'space-between';
-    `;
-
-    const MyShopHeader = styled.div`
-        margin: 1rem;
-        padding: 1rem;
-        border: 1px solid #aacd6e; 
-    `;
-
-    const AvatarStyle = styled(Avatar)`
-        margin: 0.3rem;
-    `;
-
     return(
         <AppLayout>
-            <AppDiv>
+            <MyShopAppDiv>
                 <MyShopHeader>
                     <PageHeader
                         ghost={false}
@@ -63,7 +46,7 @@ const MyShop = () => {
                     <OneItem />
                     <OneItem />
                 </Row>
-            </AppDiv>
+            </MyShopAppDiv>
         </AppLayout>
     )
 }
