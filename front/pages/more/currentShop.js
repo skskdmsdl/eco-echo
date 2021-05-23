@@ -1,6 +1,5 @@
 import React from 'react';
 import AppLayout from '../../components/AppLayout'
-import styled from 'styled-components';
 import { Button, Row, Divider } from 'antd';
 import OneShop from '../../components/OneShop'
 import { Title, AppDiv, ButtonWrapper, ButtonStyle } from './styles';
