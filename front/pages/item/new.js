@@ -55,15 +55,17 @@ const NewItem = () => {
         <Form.Item label="가격">
           <Input placeholder="input placeholder" />
         </Form.Item>
-        <Upload
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-          listType="picture"
-          className="upload-list-inline"
-        >
-          <Button icon={<UploadOutlined />}>Upload</Button>
-        </Upload>
+        <div style={{margin:"0 500px 40px 195px"}}>
+          <Upload
+            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+            listType="picture"
+            className="upload-list-inline"
+          >
+            <Button icon={<UploadOutlined />}>Upload</Button>
+          </Upload>
+        </div>
         <Form.Item {...buttonItemLayout}>
-          <Button type="primary">Submit</Button>
+          <Button>상품등록</Button>
         </Form.Item>
       </Form>
       </AppLayout>
