@@ -26,3 +26,17 @@ export const ContentStyle = styled(Content)`
         background-color: white;
         text-align: left;
     `;
+
+export const SearchResultDiv = styled.div`
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem;
+        flex: 1;
+        flex-direction: 'row';
+        justifyContent: 'space-between';
+    `;
+
+export const SearchResultHeaderStyle = styled.div`
+        text-align: center;
+        margin: 2rem 0 2rem 0;
+    `;
