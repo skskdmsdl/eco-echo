@@ -35,7 +35,7 @@ const NewItem = () => {
     return (
       <AppLayout>
         <Form
-        style={{ padding: '150px' }}
+        style={{ padding: '150px', marginLeft: '100px' }}
         {...formItemLayout}
         layout={formLayout}
         form={form}
@@ -49,25 +49,25 @@ const NewItem = () => {
             <Radio.Button value="inline">Inline</Radio.Button>
           </Radio.Group>
         </Form.Item> */}
-         <Form.Item label="아이디">
-          <Input placeholder="input placeholder" />
+         <Form.Item>
+          <Input placeholder="아이디" />
         </Form.Item>
-        <Form.Item label="비밀번호">
-          <Input placeholder="input placeholder" />
+        <Form.Item>
+          <Input placeholder="비밀번호 입력" />
         </Form.Item>
-        <Form.Item label="비밀번호 확인">
-          <Input placeholder="input placeholder" />
+        <Form.Item>
+          <Input placeholder="비밀번호 확인" />
         </Form.Item>
-        <Form.Item label="쇼핑몰명">
-          <Input placeholder="input placeholder" />
+        <Form.Item>
+          <Input placeholder="쇼핑몰명" />
         </Form.Item>
-        <Form.Item label="쇼핑몰 링크">
-          <Input placeholder="input placeholder" />
+        <Form.Item>
+          <Input placeholder="쇼핑몰 링크" />
         </Form.Item>
-        <Form.Item label="쇼핑몰 카테고리">
-          <Input placeholder="input placeholder" />
+        <Form.Item>
+          <Input placeholder="쇼핑몰 카테고리" />
         </Form.Item>
-        <div style={{margin:"0 500px 40px 195px"}}>
+        <div style={{margin:"0 500px 40px 0"}}>
           <Upload
             action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
             listType="picture"
