@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Upload } from 'antd';
+import { Form, Input, Button, Upload, Checkbox } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
 import AppLayout from '../../components/AppLayout';
@@ -7,6 +7,11 @@ import AppLayout from '../../components/AppLayout';
 const NewItem = () => {
   const [form] = Form.useForm();
   const [formLayout, setFormLayout] = useState('horizontal');
+
+  function onChange(checkedValues) {
+    console.log('checked = ', checkedValues);
+  };
+  const plainOptions = ['러블리', '섹시', '모던시크', '페미닌', '럭셔리', '심플베이직', '유니크', '빅사이즈', '언더웨어', '쥬얼리', '기타잡화' ];
 
   const onFormLayoutChange = ({ layout }) => {
     setFormLayout(layout);
@@ -42,6 +47,7 @@ const NewItem = () => {
         initialValues={{ layout: formLayout }}
         onValuesChange={onFormLayoutChange}
       >
+        <p>기업회원 가입하기</p>
         {/* <Form.Item label="Form Layout" name="layout">
           <Radio.Group value={formLayout}>
             <Radio.Button value="horizontal">Horizontal</Radio.Button>
@@ -65,7 +71,8 @@ const NewItem = () => {
           <Input placeholder="쇼핑몰 링크" />
         </Form.Item>
         <Form.Item>
-          <Input placeholder="쇼핑몰 카테고리" />
+          <p>카테고리 선택</p>
+          <Checkbox.Group options={plainOptions} onChange={onChange} />
         </Form.Item>
         <div style={{margin:"0 500px 40px 0"}}>
           <Upload
