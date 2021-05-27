@@ -6,6 +6,7 @@ import { TagsTwoTone, SkinTwoTone, ShopTwoTone, HeartTwoTone, MessageTwoTone, Pr
 import SearchForm from './SearchForm';
 import LoginForm from './LoginForm';
 import SettingForm from './SettingForm';
+import AdminMenu from './AdminMenu';
 import CurrentItemPopup from '../components/CurrentItemPopup';
 
 const dummy = {
@@ -86,6 +87,7 @@ const AppLayout = ({ children }) => {
                 {dummy.isLoggedIn ? <SettingForm /> : <LoginForm />}
                 <SearchForm />
                 <LoginForm />
+                <AdminMenu />
             </Menu>
             {children}
             <CurrentItemPopup />
