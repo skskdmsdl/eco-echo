@@ -48,7 +48,7 @@ const AdminMenu = () => {
                 onClose={onClose}
                 visible={visible}
             >
-                <Button>회원관리</Button>
+                <Button><Link href='/admin/member'>회원관리</Link></Button>
                 <Button>쇼핑몰관리</Button>
                 <Button>상품관리</Button>
             </Drawer>
