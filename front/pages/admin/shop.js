@@ -5,7 +5,7 @@ import AppLayout from '../../components/AppLayout';
 import SelectCategoryForm from '../../components/SelectCategoryForm'
 
 
-const Admin = () => {
+const ShowShop = () => {
 
     const { Meta } = Card;
     const { Option } = Select;
@@ -37,7 +37,7 @@ const Admin = () => {
         <AppLayout>
             <>
                 <AppDiv>
-                    <Divider><h2>회원 관리</h2></Divider>
+                    <Divider><h2>쇼핑몰 관리</h2></Divider>
                     <SelectCategoryForm value={children} />
                     <SearchStyle placeholder="쇼핑몰 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
 
@@ -47,4 +47,4 @@ const Admin = () => {
     )
 }
 
-export default Admin;
+export default ShowShop;

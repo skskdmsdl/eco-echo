@@ -49,8 +49,8 @@ const AdminMenu = () => {
                 visible={visible}
             >
                 <Button><Link href='/admin/member'>회원관리</Link></Button>
-                <Button>쇼핑몰관리</Button>
-                <Button>상품관리</Button>
+                <Button><Link href='/admin/shop'>쇼핑몰관리</Link></Button>
+                <Button><Link href='/admin/item'>상품관리</Link></Button>
             </Drawer>
         </>
     );
