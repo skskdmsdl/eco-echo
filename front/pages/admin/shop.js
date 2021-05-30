@@ -38,8 +38,16 @@ const ShowShop = () => {
             <>
                 <AppDiv>
                     <Divider><h2>쇼핑몰 관리</h2></Divider>
-                    <SelectCategoryForm value={children} />
-                    <SearchStyle placeholder="쇼핑몰 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
+                    <div style={{width: '35%', margin: '0 auto'}} >
+                        <Input.Group compact>
+                            <Select defaultValue="name" style={{ width: '30%' }}>
+                                <Option value="name">쇼핑몰명</Option>
+                                <Option value="id">쇼핑몰 아이디</Option>
+                            </Select>
+                            <Input.Search allowClear style={{ width: '70%' }} placeholder="쇼핑몰 검색"/>
+                        </Input.Group>
+                    </div>
+                    {/*<SearchStyle placeholder="회원 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />*/}
 
                 </AppDiv>
             </>

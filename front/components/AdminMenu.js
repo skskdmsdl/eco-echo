@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import useInput from '../hooks/useInput';
 
-const ButtonWrapper = styled(Button)`
+const AdminButton = styled(Button)`
     background: #aacd6e;
     border-color: #aacd6e;
     
@@ -15,6 +15,12 @@ const ButtonWrapper = styled(Button)`
         background: #80c340;
         border-color: #80c340;
     }
+`;
+
+const ButtonStyle = styled(Button)`
+    width: 6.5rem;
+    margin: 0.5rem;
+    text-align: center;
 `;
 
 const AdminMenu = () => {
@@ -39,18 +45,20 @@ const AdminMenu = () => {
 
     return (
         <>
-            <ButtonWrapper type="primary" onClick={showDrawer}>
+            <AdminButton type="primary" onClick={showDrawer}>
                 관리자메뉴
-            </ButtonWrapper>
+            </AdminButton>
             <Drawer
                 placement="right"
                 closable={false}
                 onClose={onClose}
                 visible={visible}
             >
-                <Button><Link href='/admin/member'>회원관리</Link></Button>
-                <Button><Link href='/admin/shop'>쇼핑몰관리</Link></Button>
-                <Button><Link href='/admin/item'>상품관리</Link></Button>
+                <div style={{textAlign: 'center'}}>
+                    <ButtonStyle><Link href='/admin/member'>회원관리</Link></ButtonStyle><br/>
+                    <ButtonStyle><Link href='/admin/shop'>쇼핑몰관리</Link></ButtonStyle><br/>
+                    <ButtonStyle><Link href='/admin/item'>상품관리</Link></ButtonStyle>
+                </div>
             </Drawer>
         </>
     );
