@@ -8,6 +8,7 @@ const CurrentItemPopup = () => {
 
 
     const PopupStyle = styled.div`
+        background-color: white;
         text-align: center;
         top: 20rem;
         right: 2rem;

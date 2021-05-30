@@ -38,8 +38,16 @@ const ShowItem = () => {
             <>
                 <AppDiv>
                     <Divider><h2>상품 관리</h2></Divider>
-                    <SelectCategoryForm value={children} />
-                    <SearchStyle placeholder="상품 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />
+                    <div style={{width: '35%', margin: '0 auto'}} >
+                        <Input.Group compact>
+                            <Select defaultValue="name" style={{ width: '30%' }}>
+                                <Option value="name">상품명</Option>
+                                <Option value="id">상품번호</Option>
+                            </Select>
+                            <Input.Search allowClear style={{ width: '70%' }} placeholder="상품 검색"/>
+                        </Input.Group>
+                    </div>
+                    {/*<SearchStyle placeholder="회원 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />*/}
 
                 </AppDiv>
             </>
