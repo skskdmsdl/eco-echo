@@ -2,6 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import { Card, Avatar, Row, Col, Select, Input, Divider } from 'antd';
 import styled from 'styled-components';
 import AppLayout from '../../components/AppLayout';
+import EditableTable from '../../components/DataTable';
 // import './style.css';
 
 const ShowMember = () => {
@@ -35,7 +36,7 @@ const ShowMember = () => {
             <>
                 <AppDiv>
                     <Divider><h2>회원 관리</h2></Divider>
-                    <div style={{width: '35%', margin: '0 auto'}} >
+                    <div style={{ width: '35%', margin: '0 auto', marginBottom: '2rem'}} >
                         <Input.Group compact>
                             <Select defaultValue="name" style={{ width: '30%' }}>
                                 <Option value="name">이름</Option>
@@ -45,7 +46,7 @@ const ShowMember = () => {
                         </Input.Group>
                     </div>
                     {/*<SearchStyle placeholder="회원 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />*/}
-
+                    <EditableTable />
                 </AppDiv>
             </>
         </AppLayout>
