@@ -62,19 +62,6 @@ const Qna = () => {
                 <div style={{ padding: '0 250px' }}>
                     <Table columns={columns} dataSource={data} size="middle" />
                 </div>
-                {/* <List
-                    itemLayout="horizontal"
-                    // dataSource={data}
-                    renderItem={item => (
-                    <List.Item>
-                        <List.Item.Meta
-                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title={<a href="https://ant.design">{item.title}</a>}
-                        description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                        />
-                    </List.Item>
-                    )}
-                /> */}
             </div>
         </AppLayout>
     );
