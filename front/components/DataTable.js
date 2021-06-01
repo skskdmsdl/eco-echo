@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Table, Input, InputNumber, Popconfirm, Form, Typography } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
+
+
 const originData = [];
 
 for (let i = 0; i < 100; i++) {
@@ -48,7 +51,7 @@ const EditableCell = ({
     );
 };
 
-const EditableTable = () => {
+const DataTable = () => {
     const [form] = Form.useForm();
     const [data, setData] = useState(originData);
     const [editingKey, setEditingKey] = useState('');
@@ -174,4 +177,4 @@ const EditableTable = () => {
     );
 };
 
-export default EditableTable;
+export default DataTable;

@@ -2,7 +2,8 @@ import React, { useEffect, useCallback } from 'react';
 import { Card, Avatar, Row, Col, Select, Input, Divider } from 'antd';
 import styled from 'styled-components';
 import AppLayout from '../../components/AppLayout';
-import EditableTable from '../../components/DataTable';
+import DataTable from '../../components/DataTable';
+
 // import './style.css';
 
 const ShowMember = () => {
@@ -46,7 +47,7 @@ const ShowMember = () => {
                         </Input.Group>
                     </div>
                     {/*<SearchStyle placeholder="회원 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />*/}
-                    <EditableTable />
+                    <DataTable />
                 </AppDiv>
             </>
         </AppLayout>

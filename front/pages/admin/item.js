@@ -2,7 +2,9 @@ import React, { useEffect, useCallback } from 'react';
 import { Card, Avatar, Row, Col, Select, Input, Divider } from 'antd';
 import styled from 'styled-components';
 import AppLayout from '../../components/AppLayout';
-import SelectCategoryForm from '../../components/SelectCategoryForm'
+import SelectCategoryForm from '../../components/SelectCategoryForm';
+import DataTable from '../../components/DataTable';
+
 
 
 const ShowItem = () => {
@@ -38,7 +40,7 @@ const ShowItem = () => {
             <>
                 <AppDiv>
                     <Divider><h2>상품 관리</h2></Divider>
-                    <div style={{width: '35%', margin: '0 auto'}} >
+                    <div style={{ width: '35%', margin: '0 auto', marginBottom: '2rem'}} >
                         <Input.Group compact>
                             <Select defaultValue="name" style={{ width: '30%' }}>
                                 <Option value="name">상품명</Option>
@@ -48,7 +50,7 @@ const ShowItem = () => {
                         </Input.Group>
                     </div>
                     {/*<SearchStyle placeholder="회원 검색" allowClear onSearch={onSearch} style={{ width: 200 }} />*/}
-
+                    <DataTable />
                 </AppDiv>
             </>
         </AppLayout>
