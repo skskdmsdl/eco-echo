@@ -9,7 +9,7 @@ import rootSaga from '../sagas';
 // action을 실행하기 전에 console.log를 찍어주는 middleware
 // redux-devtools를 대체 할 수 있음
 // const loggerMiddleware = ({ dispatch, getState }) => (next) => (action) => {
-//   console.log(action);
+//   console.log(actnion);
 //   return next(action);
 // };
 

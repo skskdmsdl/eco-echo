@@ -93,6 +93,11 @@ const DataTable = () => {
         }
     };
 
+    const handleDelete = (key) => {
+        const dataSource = [...data];
+        setData(dataSource.filter( (item) => key !== item.key ));
+    };
+
     const columns = [
         {
             title: 'email',
@@ -133,10 +138,15 @@ const DataTable = () => {
             </Popconfirm>
           </span>
                 ) : (
-                    <Typography.Link disabled={editingKey !== ''} onClick={() => edit(record)}>
-                        Edit
-                    </Typography.Link>
-                );
+                    <>
+                        <Typography.Link disabled={editingKey !== ''} onClick={() => edit(record)}>
+                            Edit
+                        </Typography.Link> &nbsp;
+                        <Popconfirm title="Sure to delete?" onConfirm={() => handleDelete(record.key)}>
+                            <a>Delete</a>
+                        </Popconfirm>
+                    </>
+                )
             },
         },
     ];
