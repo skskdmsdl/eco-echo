@@ -26,7 +26,6 @@ const QnaPost = () => {
         <meta property="og:title" content={`${singlePost.User.nickname}님의 문의`} />
         <meta property="og:description" content={singlePost.content} />
       </Head>
-      <PostCard post={singlePost} />
     </AppLayout>
   );
 };
