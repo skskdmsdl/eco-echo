@@ -3,17 +3,15 @@ import { useSelector } from 'react-redux';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { END } from 'redux-saga';
-
 import axios from 'axios';
+
 import wrapper from '../../store/configureStore';
-import PostCard from '../../components/PostCard';
 import AppLayout from '../../components/AppLayout';
 
 const QnaPost = () => {
   const { singlePost } = useSelector((state) => state.post);
   const router = useRouter();
   const { id } = router.query;
-
 
   return (
     <AppLayout>
