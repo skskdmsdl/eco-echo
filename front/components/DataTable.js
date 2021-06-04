@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Input, InputNumber, Popconfirm, Form, Typography } from 'antd';
+import { Table, Input, InputNumber, Popconfirm, Form, Typography, Pagenation } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
 
@@ -182,6 +182,8 @@ const DataTable = () => {
                 pagination={{
                     onChange: cancel,
                 }}
+                // pagination={{ position: [bottomCenter] }}
+
             />
         </Form>
     );
