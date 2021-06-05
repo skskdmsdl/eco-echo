@@ -181,8 +181,8 @@ const DataTable = () => {
                 rowClassName="editable-row"
                 pagination={{
                     onChange: cancel,
+                    position: [ 'bottomCenter' ],
                 }}
-                // pagination={{ position: [bottomCenter] }}
 
             />
         </Form>
