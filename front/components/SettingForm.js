@@ -67,9 +67,9 @@ const SettingForm = () => {
                     <InputWrapper placeholder="이메일" />
                     <InputWrapper placeholder="닉네임" />             
                 </Form>
-                <button style={{ border: 'none', background: 'none', marginTop: '30px' }}>비밀번호 변경</button>
+                <button style={{ border: 'none', background: 'none', marginTop: '30px', cursor: 'pointer' }}>비밀번호 변경</button>
                 <br />
-                <button style={{ border: 'none', background: 'none', marginTop: '30px' }}>로그아웃</button>
+                <button style={{ border: 'none', background: 'none', marginTop: '30px', cursor: 'pointer' }}>로그아웃</button>
             </Drawer>
         </>
     );
