@@ -11,7 +11,7 @@ import AppLayout from '../../components/AppLayout';
 const QnaPost = () => {
   const { singlePost } = useSelector((state) => state.post);
   const router = useRouter();
-  const { id } = router.query;
+  // const { id } = router.query;
 
   return (
     <AppLayout>
