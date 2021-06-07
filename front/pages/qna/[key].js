@@ -17,11 +17,11 @@ const QnaPost = () => {
     <AppLayout>
       <Head>
         <title>
-          {singlePost.User.nickname}
+          {singlePost.User.email}
           님의 문의
         </title>
         <meta name="description" content={singlePost.content} />
-        <meta property="og:title" content={`${singlePost.User.nickname}님의 문의`} />
+        <meta property="og:title" content={`${singlePost.User.email}님의 문의`} />
         <meta property="og:description" content={singlePost.content} />
       </Head>
     </AppLayout>
