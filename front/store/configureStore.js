@@ -6,13 +6,6 @@ import createSagaMiddleware from 'redux-saga';
 import reducer from '../reducers';
 import rootSaga from '../sagas';
 
-// action을 실행하기 전에 console.log를 찍어주는 middleware
-// redux-devtools를 대체 할 수 있음
-// const loggerMiddleware = ({ dispatch, getState }) => (next) => (action) => {
-//   console.log(actnion);
-//   return next(action);
-// };
-
 const configureStore = (context) => {
   console.log(context);
   const sagaMiddleware = createSagaMiddleware(); // saga에서 추가된 부분
