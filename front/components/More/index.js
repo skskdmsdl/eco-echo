@@ -1,7 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { Button } from 'antd';
+
 import { ButtonWrapper, DivWrapper, Global } from './styles';
 
 const More = () => {
