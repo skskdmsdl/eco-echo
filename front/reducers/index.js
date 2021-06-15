@@ -11,7 +11,6 @@ const rootReducer = (state, action) => {
     default: {
       const combinedReducer = combineReducers({
         user,
-        post,
       });
       return combinedReducer(state, action);
     }
