@@ -12,3 +12,16 @@ import {
     SIGN_UP_REQUEST,
     SIGN_UP_SUCCESS
   } from '../reducers/user';
+
+
+
+export default function* userSaga() {
+  yield all([
+    fork(watchChangeNickname),
+    fork(watchLoadMyInfo),
+    fork(watchLoadUser),
+    fork(watchLogIn),
+    fork(watchLogOut),
+    fork(watchSignUp),
+  ]);
+}
