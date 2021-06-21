@@ -13,6 +13,24 @@ import {
     SIGN_UP_SUCCESS
   } from '../reducers/user';
 
+function logInAPI(data) { // *쓰면 에러남
+  return axios.post('/user/login', data); // 실제 서버에 요청 보냄
+}
+
+function* logIn(action) {
+  try {
+    const result = yield call(logInAPI, action.data); // call(함수, 함수에 들어가는 매개변수, 매개변수,...)
+    yield put({
+      type: LOG_IN_SUCCESS,
+      data: result.data,
+    });
+  } catch (err) {
+    yield put({
+      type: LOG_IN_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
 
 
   
