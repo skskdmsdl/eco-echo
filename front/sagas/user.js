@@ -32,7 +32,23 @@ function* logIn(action) {
   }
 }
 
+function logOutAPI() {
+  return axios.post('/user/logout');
+}
 
+function* logOut() {
+  try {
+    yield call(logOutAPI);
+    yield put({
+      type: LOG_OUT_SUCCESS,
+    });
+  } catch (err) {
+    yield put({
+      type: LOG_OUT_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
   
 function* watchLogIn() {
   yield takeLatest(LOG_IN_REQUEST, logIn); // thunk의 비동기 actionCreator
