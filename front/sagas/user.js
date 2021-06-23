@@ -49,6 +49,26 @@ function* logOut() {
     });
   }
 }
+
+function signUpAPI(data) {
+  return axios.post('/user', data);
+}
+
+function* signUp(action) {
+  try {
+    const result = yield call(signUpAPI, action.data);
+    console.log(result);
+    yield put({
+      type: SIGN_UP_SUCCESS,
+      // data: result.data,
+    });
+  } catch (err) {
+    yield put({
+      type: SIGN_UP_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
   
 function* watchLogIn() {
   yield takeLatest(LOG_IN_REQUEST, logIn); // thunk의 비동기 actionCreator
