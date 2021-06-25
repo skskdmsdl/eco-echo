@@ -7,4 +7,3 @@
 # Skills
 * JavaScript
 * React
-* Java
